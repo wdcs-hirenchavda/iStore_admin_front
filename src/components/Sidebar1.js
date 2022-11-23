@@ -34,8 +34,8 @@ function Sidebar1() {
             <NavLink  to="/product" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="table">Products</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink  to="/user" activeClassName="activeClicked" onClick={()=>{navigate('/user')}} >
-              <CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
+            <NavLink  to="/usersIstore" activeClassName="activeClicked" onClick={()=>{navigate('/user')}} >
+              <CDBSidebarMenuItem icon="user">Users</CDBSidebarMenuItem>
             </NavLink>
             <NavLink  to="/category" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="chart-line">Category</CDBSidebarMenuItem>

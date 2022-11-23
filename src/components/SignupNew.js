@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 
@@ -9,7 +9,11 @@ function SignupNew() {
     const [email,setEmail]= useState('');
     const [password, setPassword]= useState();
     const [error, setError]= useState(false);
-
+    useEffect(()=>{
+      if(localStorage.user){
+        navigate('/product')
+      }
+    },[])
     const signup = async()=>{
       if(!email || !password || !username){
           setError(true);
@@ -20,10 +24,9 @@ function SignupNew() {
           let sign = await axios.post(`http://localhost:5000/signup`,{
             username: username,
             email: email, 
-            password: password
+            password: password,
+            role:'admin',
           })
-          let data = await sign.data;
-          console.log(data.Register_token);
           if(sign.data.Register_token){
                 Swal.fire({
                     position: "top",

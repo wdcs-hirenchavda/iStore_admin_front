@@ -16,7 +16,7 @@ function Navbar1() {
     <div>
        <Navbar bg="dark" variant="dark" className="fixed-top">
         <Container>
-          <Navbar.Brand href="#home">Mr.iStore</Navbar.Brand>
+          <Navbar.Brand href="#home">iStore-admin</Navbar.Brand>
           <Navbar.Toggle />
           {!user ? <>
           <button className="btn btn-primary" onClick={()=>{navigate('/login')}} >login</button>
